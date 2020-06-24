@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
+import './font/neueMontrealLight.otf'
+import './font/neueMontrealRegular.otf'
+import'./font/hattonMedium.otf'
+import './font/hattonLight.otf'
 ReactDOM.render(
   <React.StrictMode>
     <App />

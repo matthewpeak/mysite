@@ -1,0 +1,125 @@
+.page{
+    /* /* position: fixed; */
+    width: 100%;
+    height: 100%; 
+   
+    background-color: #f9f0ec;
+}
+.blurb{
+    opacity: 0;
+    width: 900px;
+    font-family: Neu Montreal;
+    font-size: 40px;
+    font-weight: 200;
+    text-rendering: optimizeLegibility;
+    padding-right: 50px ;
+    color: #353535;
+    /* text-align: right; */
+    /* text-align: justify; */
+}
+.blurbDiv{
+    padding-top: 20px;
+    display:flex;
+    direction: row;
+    justify-content: flex-end;
+}
+
+.title{
+    opacity: 0;
+    padding-top: 30px;
+    font-family: Hatton Medium;
+    font-size: 150px;
+    font-weight: 0;
+    text-rendering: optimizeLegibility;
+    text-align: center;
+    color: #22211f;
+}
+
+.projectTitle{
+    font-family: Hatton Medium;
+    font-size: 100px;
+    font-weight: 0;
+    text-rendering: optimizeLegibility;
+    text-align: center;
+    color: #22211f;
+}
+
+.projectDiv{
+    padding-top: 50px;
+}
+
+.discoImage{
+    width: 600px;
+    height: 256px;
+     
+}
+
+.imageContainer{
+    width: 600px;
+    height: 256px;
+    
+    background-color: black;
+    overflow: hidden;
+    z-index: 1;
+    
+}
+
+.infoContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.info{
+    width: 600px;
+    font-family: Neu Montreal;
+    font-size: 25px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    color: #353535
+}
+
+.miniTitle{
+    padding-left: 30px;
+    font-family: Neu Montreal;
+    font-size: 25px;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    color: #22211f;
+}
+
+.line{
+    border: 3px solid #22211f; width: 300px;  margin-right: 76px;
+    }
+
+.whatever{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 50px;
+}
+.emailContainer{
+    padding-top: 100px;
+    right: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.hitMeUp{
+    color: #22211f;
+    font-family: Hatton Medium;
+    font-size: 75px;
+    font-weight: 0;
+    text-rendering: optimizeLegibility;
+    padding-right: 76PX;
+}
+.email{
+    color: #22211f;
+    font-family: Hatton Medium;
+    font-size: 40px;
+    font-weight: 0;
+    text-rendering: optimizeLegibility;
+    padding-right: 76PX;
+}
+
