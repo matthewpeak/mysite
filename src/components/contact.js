@@ -16,6 +16,12 @@ function Contact(){
         <div className="email">
             matthewpeak@gmail.com
         </div>
+        <div className="linkedIn">
+            LinkedIn
+        </div>
+        <div className="blog">
+            Blog
+        </div>    
         </div>
         </div>
 

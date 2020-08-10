@@ -39,7 +39,8 @@ function Home(){
            <div 
            ref={el=>{title=el}}
            className="title">
-            MATTHEW PEAK IS A DEVELOPER
+            MATTHEW/ 
+            PEAK
            </div>
           
            <div className="blurbDiv">
