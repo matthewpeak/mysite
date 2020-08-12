@@ -1,16 +1,16 @@
 import React,{useState,useEffect,useRef} from 'react';
 import Projects from './projects';
-import './Allthe.css';
+import './styles.css';
 import Contact from './contact';
 import {TweenMax,Power3} from 'gsap';
 
-function Home(){
+function Home () {
 
-    let title= useRef(null)
-    let blurb= useRef(null)
-    const [inProp, setInProp] = useState(true)
+    let title = useRef (null)
+    let blurb = useRef (null)
+    const [inProp, setInProp] = useState (true)
     
-    useEffect(() => {
+    useEffect( () => {
         TweenMax.to(
             title,
             7,
@@ -18,7 +18,7 @@ function Home(){
                 opacity:1,
                 y:-20,
                 ease:Power3.easeOut,
-                delay:.2
+                delay:.2,
             }
         )
         TweenMax.to(
@@ -27,7 +27,7 @@ function Home(){
             {
                 opacity:1,
                 y:-20,
-                ease:Power3.easeOut
+                ease:Power3.easeOut,
             }
         )
     }, []);
@@ -36,22 +36,20 @@ function Home(){
     return(
         <div className="page">
            
-           <div 
-           ref={el=>{title=el}}
-           className="title">
-            MATTHEW/ 
-            PEAK
+           <div ref = { el => {title=el} } className="title">
+            MATTHEW
+            PEAK.
            </div>
           
            <div className="blurbDiv">
-           <div className="blurb" ref={el=>{blurb=el}}>
-               MATTHEW IS A NEW YORK CITY BASED FULL STACK DEVELOPER AND DESIGNER 
+           <div className="blurb" ref = { el => {blurb=el} }>
+               MATTHEW IS A NEW YORK CITY BASED SOFTWARE ENGINEER AND DESIGNER 
                WHO ENJOYS COLLABERATING WITH COMPANIES ARTISTS AGENCIES BOTH BIG AND SMALL.
            </div>
            </div>
            <Projects/>
            <Contact/>
-           {/* <div ref={divRef} /> */}
+           
         </div>
         
     )

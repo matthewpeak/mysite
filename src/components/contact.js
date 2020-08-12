@@ -1,27 +1,24 @@
 import React,{useState} from 'react';
-import './Allthe.css'
+import './styles.css'
 
-function Contact(){
+function Contact () {
  
     return(
         <div>
-        
-        
-        
-        <div className="emailContainer">
-        <div className="line"> </div>
-        <div className="hitMeUp">
+        <div className = "emailContainer">
+        <div className = "line"> </div>
+        <div className = "hitMeUp">
            HIT ME UP 
         </div>
-        <div className="email">
+        <a  className = "email">
             matthewpeak@gmail.com
-        </div>
-        <div className="linkedIn">
+        </a>
+        <a href = "https://www.linkedin.com/in/matthew-peak-450b624b/" className = "linkedIn">
             LinkedIn
-        </div>
-        <div className="blog">
+        </a>
+        <a href = "https://www.medium.com/@matthewvondanger" className = "blog">
             Blog
-        </div>    
+        </a>    
         </div>
         </div>
 
