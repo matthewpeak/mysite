@@ -14,6 +14,7 @@ function Projects (params) {
   })
 
     return(
+
     <div className = 'projectDiv'>
       <h5 className = 'miniTitle'>PROJECTS:</h5>
        <div className = "projectCard">
@@ -33,6 +34,7 @@ function Projects (params) {
         </div>
       </div>
     </div>
+    
   )
 }
 

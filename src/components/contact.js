@@ -4,6 +4,7 @@ import './styles.css'
 function Contact () {
  
     return(
+        
         <div>
         <div className = "emailContainer">
         <div className = "line"> </div>

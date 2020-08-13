@@ -12,7 +12,8 @@
     "react-dom": "^16.13.1",
     "react-reveal": "^1.2.2",
     "react-scripts": "3.4.1",
-    "react-transition-group": "^4.4.1"
+    "react-transition-group": "^4.4.1",
+    "react-use": "^15.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
