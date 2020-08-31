@@ -37,12 +37,19 @@ function Home () {
         )
     }, []);
     
-    const sectionRef = useRef(null);
+  const sectionRef = useRef(null);
+  const sectionRef2 = useRef(null);
   // All the ref to be observed
   const intersection = useIntersection(sectionRef, {
     root: null,
     rootMargin: "0px",
-    threshold: 0.5
+    threshold: 0.5,
+  });
+
+  const intersection2 = useIntersection(sectionRef2,{
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
   });
 
   // Animation for fading in
@@ -52,7 +59,7 @@ function Home () {
       y: -60,
       ease: "power4.out",
       stagger: {
-        amount: 0.3
+        amount: 0.3,
       }
     });
   };
@@ -61,7 +68,7 @@ function Home () {
     gsap.to(element, 1, {
       opacity: 0,
       y: -20,
-      ease: "power4.out"
+      ease: "power4.out",
     });
   };
 
@@ -69,11 +76,14 @@ function Home () {
   intersection && intersection.intersectionRatio < 0.5
     ? fadeOut(".projectDiv")
     : fadeIn(".projectDiv");
-    
+
+    intersection2 && intersection2.intersectionRatio < 0.5
+    ? fadeOut(".emailContainer")
+    : fadeIn(".emailContainer");
    
     return(
         
-        <div className="page">
+    <div className="page">
            <div ref = { el => {title=el} } className="title">
             MATTHEW
             PEAK.
@@ -81,43 +91,43 @@ function Home () {
            <div className="blurbDiv">
            <div className="blurb" ref = { el => { blurb = el} }>
                MATTHEW IS A NEW YORK CITY BASED SOFTWARE ENGINEER AND DESIGNER 
-               WHO ENJOYS COLLABERATING WITH COMPANIES ARTISTS AGENCIES BOTH BIG AND SMALL.
+               WHO ENJOYS CREATIVE AND MINIMAL WEB DESIGN. CURRENTLY SEEKING OPPORTUNITIES
+               BOTH NYC BASED AND REMOTE. 
            </div>
            </div>
-         <div className = 'projectDiv' ref = { sectionRef}>
+         <div className = 'projectDiv' ref = { sectionRef }>
             <h5  className = 'miniTitle'> PROJECTS: </h5>
              <div className = "projectCard">
             <h1 className = 'projectTitle'>
-            LET'S DISCO BABY! 
+                LET'S DISCO BABY! 
             </h1>
             <div className = "infoContainer">
             <div className = "imageContainer">
             <img  className = 'discoImage' src = "/letsDisco.png" alt = "discoImage"></img>
             </div>
             <div className = "info">
-            Let's Disco Baby! is a fully customizable digital audio workspace and visualizer
-            that leverages three dimensional graphics. Built using Rails, React, Tone.js, Three.js. 
+            <a className="discoLink" href="http://34.68.136.195/"> Let's Disco Baby!</a>  is a fully customizable digital audio workspace and visualizer
+            that leverages three dimensional graphics. Built using Rails, React, Tone.js, Three.js.
             </div>
             </div>
         </div>
         </div>
-        <div className = "emailContainer">
-        <div className = "line"> </div>
-        <div className = "hitMeUp">
-           HIT ME UP 
+        <div className = "emailContainer" ref = { sectionRef2 } >
+            <div className = "line"> </div>
+            <div className = "hitMeUp">
+            HIT ME UP 
+            </div>
+            <a  className = "email">
+                matthewpeak@gmail.com
+            </a>
+            <a href = "https://www.linkedin.com/in/matthew-peak-450b624b/" className = "linkedIn">
+                LinkedIn
+            </a>
+            <a href = "https://www.medium.com/@matthewvondanger" className = "blog">
+                Blog
+            </a>    
         </div>
-        <a  className = "email">
-            matthewpeak@gmail.com
-        </a>
-        <a href = "https://www.linkedin.com/in/matthew-peak-450b624b/" className = "linkedIn">
-            LinkedIn
-        </a>
-        <a href = "https://www.medium.com/@matthewvondanger" className = "blog">
-            Blog
-        </a>    
-        </div>
-        
-        </div>
+    </div>
         
     )
 }
